@@ -22,6 +22,7 @@
         <!-- Note: during development using the same value for your login, password, database name and project name is really convenient -->
         <database.name>myappdb</database.name>
         <database.host>localhost</database.host>
+        <database.port>3306</database.port>
         <database.user>dbuser</database.user>
         <database.password>dbuserpass</database.password>
 
@@ -34,7 +35,7 @@
         
         <!-- jdbc settings -->
         <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
-        <jdbc.url>jdbc:mysql://localhost:3306/${database.name}</jdbc.url>
+        <jdbc.url>jdbc:mysql://${database.host}:${database.port}/${database.name}</jdbc.url>
         <jdbc.user>${database.user}</jdbc.user>
         <jdbc.password>${database.password}</jdbc.password>
         <jdbc.catalog></jdbc.catalog>
